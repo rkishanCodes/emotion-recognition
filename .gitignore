@@ -1,0 +1,42 @@
+# Backend (FastAPI)
+# Backend (FastAPI)
+backend/__pycache__/
+backend/deepface_env/
+backend/.env
+backend/*.db
+backend/.mypy_cache/
+backend/.pytest_cache/
+
+# Frontend (React)
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+frontend/.vercel/
+frontend/.turbo/
+frontend/dist/
+frontend/build/
+
+# General
+.DS_Store
+*.log
+*.pyc
+.vscode/
+.idea/
+*.swp
+
+# Frontend (React)
+frontend/node_modules/
+frontend/.next/
+frontend/.env.local
+frontend/.vercel/
+frontend/.turbo/
+frontend/dist/
+frontend/build/
+
+# General
+.DS_Store
+*.log
+*.pyc
+.vscode/
+.idea/
+*.swp
