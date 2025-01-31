@@ -1,0 +1,38 @@
+.product_card{
+    background-color: #141414;
+    padding: 4rem;
+    border-radius: 1rem;
+    color:white;
+    width: 20rem;
+    height: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.product_card img{
+    width: 15rem;
+    height: 100%;
+
+}
+
+.product_text{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.product_text h1{
+    font-size: 1rem;
+    letter-spacing: .1rem;
+}
+
+.product_text span{
+    width: .7rem;
+    height: .7rem;
+    border-radius: 100%;
+}

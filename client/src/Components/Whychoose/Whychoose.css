@@ -1,0 +1,30 @@
+.whycoose{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    color: white;
+}
+
+.whycoose .heading h1{
+    font-size: 3rem;
+}
+
+.whycoose .para{
+    width: 60%;
+}
+
+.whycoose .para p{
+    text-align: center;
+    line-height: 2rem;
+    font-size: .9rem;
+    color: #b3b3a6;
+}
+
+.whycoose .para p b{
+    color: wheat;
+}

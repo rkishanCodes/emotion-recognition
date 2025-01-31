@@ -1,0 +1,30 @@
+.navbar{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: #141414;
+}
+
+.nav_container ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.nav_container ul li{
+    font-size: 1rem;
+    color: #adadad;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.nav_container ul li:hover{
+    color: white;
+}
+
+.navbar .logo img{
+    width: 6rem;
+}

@@ -1,0 +1,28 @@
+*{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+    list-style: none;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    background-color: none;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #aaa;
+    border-radius: 10px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    background-color: #282828;
+}

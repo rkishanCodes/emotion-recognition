@@ -1,0 +1,52 @@
+.category-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: black;
+    padding: 2rem;
+  }
+  
+  .category-list {
+    list-style: none;
+    width: 100%;
+  }
+  
+  .category-item {
+    font-size: 3rem;
+    padding: 3rem;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s ease;
+    border-bottom: 1px solid #aaa;
+    width: 100%;
+  }
+  .category-item:hover,
+  .category-item.active {
+    color: #fff;
+  }
+  
+ 
+  .hover-image {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    background: #222;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .hover-image img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .hover-image p {
+    color: #fff;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
