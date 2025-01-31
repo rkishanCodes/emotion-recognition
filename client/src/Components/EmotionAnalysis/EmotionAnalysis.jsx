@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { motion } from "framer-motion";
+import { useDispatch } from "react-redux";
+import { setHeader, setLinks } from "../../actions/actionTypes";
 import "./EmotionAnalysis.css";
 
 const EmotionAnalysis = () => {
@@ -9,9 +11,12 @@ const EmotionAnalysis = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [cameraActive, setCameraActive] = useState(false);
+  const [isCaptureClosed, setIsCaptureClosed] = useState(false); // New state for closing capture
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const streamRef = useRef(null);
+
+  const dispatch = useDispatch(); // Hook to dispatch actions
 
   const enableCamera = async () => {
     try {
@@ -94,43 +99,54 @@ const EmotionAnalysis = () => {
     }
   };
 
-  const sendImageToBackend = async (file) => {
-    setLoading(true);
-    setError(null);
+ const sendImageToBackend = async (file) => {
+   setLoading(true);
+   setError(null);
 
-    const formData = new FormData();
-    formData.append("file", file);
+   const formData = new FormData();
+   formData.append("file", file);
 
-    try {
-      const response = await axios.post(
-        "http://localhost:8000/analyze_image/",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-          timeout: 10000,
-        }
-      );
+   try {
+     const response = await axios.post(
+       "http://localhost:8000/analyze_image/",
+       formData,
+       {
+         headers: {
+           "Content-Type": "multipart/form-data",
+         },
+         timeout: 10000,
+       }
+     );
 
-      if (response.data) {
-        setResult(response.data);
-      } else {
-        throw new Error("Empty response from server");
-      }
-    } catch (err) {
-      setError(err.response?.data?.message || "Failed to analyze image");
-      console.error("Error sending image:", err);
-    } finally {
-      setLoading(false);
-    }
-  };
+     if (response.data) {
+       const { header, links, resultCode } = response.data; // Assuming response has resultCode
+
+       dispatch(setHeader(header)); // Set header in Redux store
+       dispatch(setLinks(links)); // Set links in Redux store
+       setResult(response.data);
+
+       // Check if the result code is 200k
+       if (resultCode === 200000) {
+         // Adjust this condition to match your exact result
+         setIsCaptureClosed(true); // Automatically close capture if resultCode is 200k
+       }
+     } else {
+       throw new Error("Empty response from server");
+     }
+   } catch (err) {
+     setError(err.response?.data?.message || "Failed to analyze image");
+     console.error("Error sending image:", err);
+   } finally {
+     setLoading(false);
+   }
+ };
 
   const handleRetry = async () => {
     setImage(null);
     setResult(null);
     setError(null);
     setLoading(false);
+    setIsCaptureClosed(false); // Reset capture state
 
     if (streamRef.current) {
       streamRef.current.getTracks().forEach((track) => track.stop());
@@ -149,18 +165,19 @@ const EmotionAnalysis = () => {
 
       {error && <div className="error-message">{error}</div>}
 
-      {!image && (
-        <div className="video-container">
-          <video ref={videoRef} autoPlay playsInline className="video-feed" />
-          <button
-            onClick={captureImage}
-            className="capture-button"
-            disabled={loading || !cameraActive}
-          >
-            {loading ? "Processing..." : "Capture Image"}
-          </button>
-        </div>
-      )}
+      {!image &&
+        !isCaptureClosed && ( // Conditionally render capture section
+          <div className="video-container">
+            <video ref={videoRef} autoPlay playsInline className="video-feed" />
+            <button
+              onClick={captureImage}
+              className="capture-button"
+              disabled={loading || !cameraActive}
+            >
+              {loading ? "Processing..." : "Capture Image"}
+            </button>
+          </div>
+        )}
 
       {image && (
         <motion.div
@@ -172,26 +189,6 @@ const EmotionAnalysis = () => {
           <img src={image} alt="Captured" className="captured-image" />
 
           {loading && <p className="analyzing-text">Analyzing...</p>}
-
-          {result && !error && (
-            <div className="result-content">
-              <h2>Results:</h2>
-              <p>Dominant Emotion: <b>{result.dominant_emotion}</b></p>
-              <p>Confidence: <b>{result.confidence.toFixed(2)}%</b></p>
-              <h3>Emotion Breakdown:</h3>
-              <div className="emotion-breakdown">
-                {Object.entries(result.emotions).map(([emotion, score]) => (
-                  <div key={emotion} className="emotion-item">
-                    <span>{emotion}</span>
-                    <div className="progress-bar">
-                      <div className="progress" style={{ width: `${score}%` }} />
-                    </div>
-                    <span>{score.toFixed(2)}%</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
 
           <button onClick={handleRetry} className="retry-button">
             Try Again
