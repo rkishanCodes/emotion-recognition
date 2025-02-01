@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from deepface import DeepFace
 import os
 import uuid
+import json
 
 app = FastAPI()
 
@@ -19,51 +20,11 @@ app.add_middleware(
     allow_headers=["*"], 
 )
 
-model = DeepFace.build_model("VGG-Face")
+# Load book data from JSON file
+with open("book.json", "r") as file:
+    book_data = json.load(file)
 
-# Emotion-to-Books Mapping
-book_data = {
-    "angry": [
-        "https://m.media-amazon.com/images/I/71-3H3w6t9L.jpg",
-        "https://m.media-amazon.com/images/I/61uDaiSPAnL._AC_UF1000,1000_QL80_.jpg",
-        "https://m.media-amazon.com/images/I/715xo1xPg9L._AC_UF1000,1000_QL80_.jpg",
-        "https://m.media-amazon.com/images/I/81HuYGapupL._AC_UF1000,1000_QL80_.jpg",
-        "https://m.media-amazon.com/images/I/71-OPNdR1FL.jpg"
-    ],
-    "disgust": [
-        "https://m.media-amazon.com/images/I/91yIVkLIPDL._AC_UF1000,1000_QL80_.jpg",
-        "https://m.media-amazon.com/images/I/71-oDsLSQYL.jpg",
-        "https://m.media-amazon.com/images/I/61XsLQzCkRL.jpg",
-        "https://m.media-amazon.com/images/I/51A1m7RzTjL._AC_UF1000,1000_QL80_.jpg",
-        "https://m.media-amazon.com/images/I/81ChFcmhXDL._AC_UF1000,1000_QL80_.jpg"
-    ],
-    "fear": [
-        "https://m.media-amazon.com/images/I/81yRVLErJ9L.jpg",
-        "https://m.media-amazon.com/images/I/819zSRTimoL.jpg",
-        "https://m.media-amazon.com/images/I/81HabVWyucL.jpg",
-        "https://m.media-amazon.com/images/I/61EKujVNIEL._AC_UF1000,1000_QL80_.jpg"
-    ],
-    "happy": [
-        "https://m.media-amazon.com/images/I/61o3KimH2tL._AC_UF1000,1000_QL80_.jpg",
-        "https://m.media-amazon.com/images/I/91pTA0XmD1L._AC_UF1000,1000_QL80_.jpg",
-        "https://m.media-amazon.com/images/I/81l3rZK4lnL.jpg",
-        "https://m.media-amazon.com/images/I/61HAE8zahLL.jpg",
-        "https://m.media-amazon.com/images/I/619ZKDSCt1L.jpg"
-    ],
-    "sad": [
-        "https://m.media-amazon.com/images/I/71Shq1RS3lL._AC_UF1000,1000_QL80_.jpg",
-        "https://m.media-amazon.com/images/I/711JIKIt8XS._AC_UF1000,1000_QL80_.jpg",
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqBfrSaqfs2hpVKQPFXZIYUjgqcXEsHk344A&s",
-        "https://m.media-amazon.com/images/I/71iw3KvoQiL.jpg"
-    ],
-    "surprise": [
-        "https://m.media-amazon.com/images/I/71+khXHbe5L.jpg",
-        "https://m.media-amazon.com/images/I/81JJPDNlxSL.jpg",
-        "https://m.media-amazon.com/images/I/81YW99XIpJL._UF1000,1000_QL80_.jpg",
-        "https://m.media-amazon.com/images/I/81fp8q4d3ZL._UF1000,1000_QL80_.jpg",
-        "https://m.media-amazon.com/images/I/81-uOUBKrFL._AC_UF1000,1000_QL80_.jpg"
-    ]
-}
+model = DeepFace.build_model("VGG-Face")
 
 @app.post("/analyze_image/")
 async def analyze_image(file: UploadFile = File(...)):
