@@ -8,6 +8,7 @@ import Footer from "./Components/Footer/Footer";
 import CategoryList from "./Components/CategoryList/CategoryList";
 import Whychoose from "./Components/WhyChoose/Whychoose";
 import BookRecommend from "./Components/BookRecommendation/BookRecommend";
+import Ourstore from "./Components/OurStore/Ourstore";
 
 const App = () => {
   const header = useSelector((state) => state.header);
@@ -21,7 +22,7 @@ const App = () => {
 
       {header && <BookRecommend />}
 
-      <Products />
+      <Ourstore/>
       <CategoryList />
       <Whychoose />
       <Footer />

@@ -13,6 +13,10 @@ const Aibooksuggestion = () => {
     setShowEmotionAnalysis(false);
   };
 
+  const handleRecommendationReceived = () => {
+    setShowEmotionAnalysis(false); 
+  };
+
   return (
     <div className="Aibooksuggestion">
       <div className="heading">
@@ -39,7 +43,7 @@ const Aibooksuggestion = () => {
             <button className="close-button" onClick={handleClosePopup}>
               ✖
             </button>
-            <EmotionAnalysis />
+            <EmotionAnalysis onRecommendationReceived={handleRecommendationReceived} handleClosePopup={handleClosePopup}/>
           </div>
         </div>
       )}

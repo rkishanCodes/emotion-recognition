@@ -5,18 +5,18 @@ import { useDispatch } from "react-redux";
 import { setHeader, setLinks } from "../../actions/actionTypes";
 import "./EmotionAnalysis.css";
 
-const EmotionAnalysis = () => {
+const EmotionAnalysis = ({ handleClosePopup }) => {
   const [image, setImage] = useState(null);
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [cameraActive, setCameraActive] = useState(false);
-  const [isCaptureClosed, setIsCaptureClosed] = useState(false); // New state for closing capture
+  const [isCaptureClosed, setIsCaptureClosed] = useState(false); 
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
   const streamRef = useRef(null);
 
-  const dispatch = useDispatch(); // Hook to dispatch actions
+  const dispatch = useDispatch(); 
 
   const enableCamera = async () => {
     try {
@@ -49,6 +49,20 @@ const EmotionAnalysis = () => {
       }
     };
   }, []);
+
+  // Function to stop the camera instantly
+  const stopCamera = () => {
+    if (streamRef.current) {
+      streamRef.current.getTracks().forEach((track) => track.stop());
+      streamRef.current = null;
+    }
+
+    if (videoRef.current) {
+      videoRef.current.srcObject = null;
+    }
+
+    setCameraActive(false); // Ensure the camera state is updated
+  };
 
   const captureImage = () => {
     if (!videoRef.current || !canvasRef.current) {
@@ -85,61 +99,61 @@ const EmotionAnalysis = () => {
           });
 
           const imageUrl = URL.createObjectURL(file);
-          setImage(imageUrl);
-          sendImageToBackend(file);
+          setImage(imageUrl); 
 
-          URL.revokeObjectURL(imageUrl);
+          sendImageToBackend(file);
         },
         "image/jpeg",
         0.8
       );
+
+      // Stop the camera immediately after capturing the image
+      stopCamera(); // Close the camera instantly
     } catch (err) {
       setError("Error capturing image: " + err.message);
       console.error("Error in capture:", err);
     }
   };
 
- const sendImageToBackend = async (file) => {
-   setLoading(true);
-   setError(null);
+  const sendImageToBackend = async (file) => {
+    setLoading(true);
+    setError(null);
 
-   const formData = new FormData();
-   formData.append("file", file);
+    const formData = new FormData();
+    formData.append("file", file);
 
-   try {
-     const response = await axios.post(
-       "http://localhost:8000/analyze_image/",
-       formData,
-       {
-         headers: {
-           "Content-Type": "multipart/form-data",
-         },
-         timeout: 10000,
-       }
-     );
+    try {
+      const response = await axios.post(
+        "http://localhost:8000/analyze_image/",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+          timeout: 10000,
+        }
+      );
 
-     if (response.data) {
-       const { header, links, resultCode } = response.data; // Assuming response has resultCode
+      if (response.data) {
+        const { header, links, resultCode } = response.data; // Assuming response has resultCode
 
-       dispatch(setHeader(header)); // Set header in Redux store
-       dispatch(setLinks(links)); // Set links in Redux store
-       setResult(response.data);
+        setIsCaptureClosed(true);
+        dispatch(setHeader(header)); // Set header in Redux store
+        dispatch(setLinks(links)); // Set links in Redux store
+        setResult(response.data);
 
-       // Check if the result code is 200k
-       if (resultCode === 200000) {
-         // Adjust this condition to match your exact result
-         setIsCaptureClosed(true); // Automatically close capture if resultCode is 200k
-       }
-     } else {
-       throw new Error("Empty response from server");
-     }
-   } catch (err) {
-     setError(err.response?.data?.message || "Failed to analyze image");
-     console.error("Error sending image:", err);
-   } finally {
-     setLoading(false);
-   }
- };
+        // Close the popup once the result is received
+        handleClosePopup(); 
+      } else {
+        throw new Error("Empty response from server");
+      }
+    } catch (err) {
+      setError(err.response?.data?.message || "Failed to analyze image");
+      console.error("Error sending image:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const handleRetry = async () => {
     setImage(null);
@@ -159,29 +173,37 @@ const EmotionAnalysis = () => {
     await enableCamera();
   };
 
+  // Ensure the URL is revoked after rendering
+  useEffect(() => {
+    return () => {
+      if (image) {
+        URL.revokeObjectURL(image);
+      }
+    };
+  }, [image]);
+
   return (
     <div className="emotion-container">
       <h1 className="emotion-title">Emotion Analysis</h1>
 
       {error && <div className="error-message">{error}</div>}
 
-      {!image &&
-        !isCaptureClosed && ( // Conditionally render capture section
-          <div className="video-container">
-            <video ref={videoRef} autoPlay playsInline className="video-feed" />
-            <button
-              onClick={captureImage}
-              className="capture-button"
-              disabled={loading || !cameraActive}
-            >
-              {loading ? "Processing..." : "Capture Image"}
-            </button>
-          </div>
-        )}
+      {!image && !isCaptureClosed && ( 
+        <div className="video-container">
+          <video ref={videoRef} autoPlay playsInline className="video-feed" />
+          <button
+            onClick={captureImage}
+            className="capture-button"
+            disabled={loading || !cameraActive}
+          >
+            {loading ? "Processing..." : "Capture Image"}
+          </button>
+        </div>
+      )}
 
       {image && (
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 0 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="result-container"
