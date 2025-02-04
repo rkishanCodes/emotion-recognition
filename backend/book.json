@@ -1,42 +1,259 @@
 {
   "angry": [
-    "https://m.media-amazon.com/images/I/71-3H3w6t9L.jpg",
-    "https://m.media-amazon.com/images/I/61uDaiSPAnL._AC_UF1000,1000_QL80_.jpg",
-    "https://m.media-amazon.com/images/I/715xo1xPg9L._AC_UF1000,1000_QL80_.jpg",
-    "https://m.media-amazon.com/images/I/81HuYGapupL._AC_UF1000,1000_QL80_.jpg",
-    "https://m.media-amazon.com/images/I/71-OPNdR1FL.jpg"
+    {
+      "image": "https://m.media-amazon.com/images/I/71-3H3w6t9L.jpg",
+      "url": "https://www.amazon.in/Dance-Anger-Changing-Patterns-Relationships/dp/0062319043"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/61uDaiSPAnL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Anger-Cooling-Thich-Nhat-Hanh/dp/1573229377"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/715xo1xPg9L._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Cow-Parking-Lot-Leonard-Scheff/dp/0761158154"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81HuYGapupL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/UNFU-YOURSELF-Gary-John-Bishop/dp/0062803832"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71-OPNdR1FL.jpg",
+      "url": "https://www.amazon.in/Why-Does-He-That-Controlling/dp/0425191656"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/7148uFt7XbL._UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Explosive-Child-Sixth-Understanding-Chronically-ebook/dp/B08NP52GTW"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71-d9rJLmiL._UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Letting-Go-David-R-Hawkins-ebook/dp/B00EY818TQ"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71VrNbnfjrL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Radical-Acceptance-Embracing-Heart-Buddha/dp/0553380990"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81K5YDjy3SL.jpg",
+      "url": "https://www.amazon.in/Second-Rule-Transform-Confidence-Everyday/dp/1682612384"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/61ksg-7iUQL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Nonviolent-Communication-3rd-Marshall-Rosenberg/dp/B0B5TGPKYM"
+    }
   ],
+
   "disgust": [
-    "https://m.media-amazon.com/images/I/91yIVkLIPDL._AC_UF1000,1000_QL80_.jpg",
-    "https://m.media-amazon.com/images/I/71-oDsLSQYL.jpg",
-    "https://m.media-amazon.com/images/I/61XsLQzCkRL.jpg",
-    "https://m.media-amazon.com/images/I/51A1m7RzTjL._AC_UF1000,1000_QL80_.jpg",
-    "https://m.media-amazon.com/images/I/81ChFcmhXDL._AC_UF1000,1000_QL80_.jpg"
+    {
+      "image": "https://m.media-amazon.com/images/I/91yIVkLIPDL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Gift-Fear-Gavin-Becker/dp/0316235024"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71-oDsLSQYL.jpg",
+      "url": "https://www.amazon.in/Lucifer-Effect-Understanding-Good-People/dp/0812974441"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/61XsLQzCkRL.jpg",
+      "url": "https://www.amazon.in/Outliers-Story-Success-Malcolm-Gladwell/dp/0141036257"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/51A1m7RzTjL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Blindspot-Mahzarin-R-Banaji/dp/0345528433"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81ChFcmhXDL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Road-Vintage-International-Cormac-McCarthy/dp/0307387895"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71PirX6+i8L._UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/American-Psycho-Bret-Easton-Ellis-ebook/dp/B00M43ZY5M"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81pEHsUaRRL.jpg",
+      "url": "https://www.amazon.in/WE-NEED-TALK-ABOUT-KEVIN/dp/1846687349"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/61su39k8NUL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Handmaids-Tale-Novel-Margaret-Atwood/dp/038549081X"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/713jIoMO3UL.jpg",
+      "url": "https://www.amazon.in/Sapiens-Humankind-Yuval-Noah-Harari/dp/0099590085"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71rpa1-kyvL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/1984-Signet-Classics-George-Orwell/dp/0451524934"
+    }
   ],
+
   "fear": [
-    "https://m.media-amazon.com/images/I/81yRVLErJ9L.jpg",
-    "https://m.media-amazon.com/images/I/819zSRTimoL.jpg",
-    "https://m.media-amazon.com/images/I/81HabVWyucL.jpg",
-    "https://m.media-amazon.com/images/I/61EKujVNIEL._AC_UF1000,1000_QL80_.jpg"
+    {
+      "image": "https://m.media-amazon.com/images/I/81yRVLErJ9L.jpg",
+      "url": "https://www.amazon.in/Feel-Fear-Anyway-Susan-Jeffers/dp/0091907071"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81GOZ+-+yiL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/DARING-GREATLY-Bren%C3%A9-Brown/dp/1592408419"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81HabVWyucL.jpg",
+      "url": "https://www.amazon.in/Confidence-Gap-Guide-Overcoming-Self-Doubt/dp/1590309235"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/91yIVkLIPDL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/GIFT-FEAR-Survival-Signals-Violence/dp/0316235776"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/814PoPnrBQL.jpg",
+      "url": "https://www.amazon.in/Big-Magic-Creative-Living-Beyond/dp/1594634726"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71jgxi5WW2L._UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/War-Art-Steven-Pressfield-ebook/dp/B007A4SDCG"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71Uz19zlnML._UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Courage-Be-Disliked-yourself-happiness-ebook/dp/B074TWG8V7"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/715LM2CAhGL._UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Mindset-Updated-Changing-Fulfil-Potential-ebook/dp/B01M036N60"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71u3rgEWdGL.jpg",
+      "url": "https://www.amazon.in/Happiness-Trap-Struggling-Start-Living/dp/1590305841"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81gTRv2HXrL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Cant-Hurt-Me-Master-Your/dp/1544512287"
+    }
   ],
+
   "happy": [
-    "https://m.media-amazon.com/images/I/61o3KimH2tL._AC_UF1000,1000_QL80_.jpg",
-    "https://m.media-amazon.com/images/I/91pTA0XmD1L._AC_UF1000,1000_QL80_.jpg",
-    "https://m.media-amazon.com/images/I/81l3rZK4lnL.jpg",
-    "https://m.media-amazon.com/images/I/61HAE8zahLL.jpg",
-    "https://m.media-amazon.com/images/I/619ZKDSCt1L.jpg"
+    {
+      "image": "https://m.media-amazon.com/images/I/81CjFfM9EfL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Book-Joy-Lasting-Happiness-Changing/dp/0399185046"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81l3rZK4lnL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Ikigai-H%C3%A9ctor-Garc%C3%ADa/dp/178633089X"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/61HAE8zahLL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Alchemist-Paulo-Coelho/dp/8172234988"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81c++Bb14PL._UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Tuesdays-Morrie-young-greatest-lesson-ebook/dp/B002TXZRNQ"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/61QCdGBJRRL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Little-Prince-Antoine-Saint-Exupery/dp/0812416082"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/61OByUf1TfL.jpg",
+      "url": "https://www.amazon.in/Monk-Who-Sold-His-Ferrari/dp/817992162X"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71eBWvioSkL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/-/hi/John-Leland/dp/0374538190"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/51HNapumIDL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Good-Vibes-Life-Self-love-Unlocking/dp/9386832836"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71ha4cV4GqL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Start-Why-Leaders-Inspire-Everyone/dp/1591842808"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/710b2STZwOL.jpg",
+      "url": "https://www.amazon.in/Make-Your-Bed-William-McRaven/dp/0718188861"
+    }
   ],
-  "sad":[
-    "https://m.media-amazon.com/images/I/71Shq1RS3lL._AC_UF1000,1000_QL80_.jpg",
-    "https://m.media-amazon.com/images/I/711JIKIt8XS._AC_UF1000,1000_QL80_.jpg",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqBfrSaqfs2hpVKQPFXZIYUjgqcXEsHk344A&s",
-    "https://m.media-amazon.com/images/I/71iw3KvoQiL.jpg"
+
+  "sad": [
+    {
+      "image": "https://m.media-amazon.com/images/I/71sQOfyYIaL.jpg",
+      "url": "https://www.amazon.in/Reasons-Stay-Alive-Matt-Haig/dp/1782116826"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/711JIKIt8XS._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Comfort-Book-Matt-Haig/dp/1786898292"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71-BB36A0WL._UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Maybe-You-Should-Talk-Someone-ebook/dp/B07YY1KZ41"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/91iZ2ZQduBL._UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/When-Breath-Becomes-Paul-Kalanithi-ebook/dp/B0165X8WN2"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81g2oEdeGTL.jpg",
+      "url": "https://www.amazon.in/CALLED-FORMAT-Paperback-Backman-Fredrik/dp/1444775812"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71PmfQ6+qvL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/LOST-CONNECTIONS-Johann-Hari/dp/163286830X"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81J6APjwxlL.jpg",
+      "url": "https://www.amazon.in/Midnight-Library-Matt-Haig/dp/1786892723"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81YGTQ33HnL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Light-We-Carry-Overcoming-Uncertain/dp/0241621240"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/61157LApbuL.jpg",
+      "url": "https://www.amazon.in/Mans-Search-Meaning-Viktor-Frankl/dp/1846041244"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/51SNf9vMfVL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Year-Magical-Thinking-Joan-Didion/dp/140004314X"
+    }
   ],
-  "surprise":[
-    "https://m.media-amazon.com/images/I/71+khXHbe5L.jpg",
-    "https://m.media-amazon.com/images/I/81JJPDNlxSL.jpg",
-    "https://m.media-amazon.com/images/I/81YW99XIpJL._UF1000,1000_QL80_.jpg",
-    "https://m.media-amazon.com/images/I/81fp8q4d3ZL._UF1000,1000_QL80_.jpg",
-    "https://m.media-amazon.com/images/I/81-uOUBKrFL._AC_UF1000,1000_QL80_.jpg"
+
+  "surprise": [
+    {
+      "image": "https://m.media-amazon.com/images/I/71+khXHbe5L.jpg",
+      "url": "https://www.amazon.in/Gone-Girl-Gillian-Flynn/dp/0753827662"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/91lslnZ-btL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Silent-Patient-Alex-Michaelides/dp/1250230780"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81YW99XIpJL._UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Girl-Dragon-Tattoo-Millennium-Book-ebook/dp/B00480O9L4"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/91dSMJCBz7L.jpg",
+      "url": "https://www.amazon.in/Shutter-Island-Dennis-Lehane/dp/0553824481"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81-uOUBKrFL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Behind-Closed-Doors-B-Paris/dp/1848454120"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81pgTIjt7lL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Little-Thorndike-Press-Large-Print/dp/1410472035"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81nChcVy7CL.jpg",
+      "url": "https://www.amazon.in/Then-There-Were-None/dp/0062073486"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/7196sTeTolL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Woman-Window-J-Finn/dp/0008294372"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/81SFYne3dWL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/Before-I-Go-Sleep-Watson/dp/0552164127"
+    },
+    {
+      "image": "https://m.media-amazon.com/images/I/71pJBm3NbrL._AC_UF1000,1000_QL80_.jpg",
+      "url": "https://www.amazon.in/We-Were-Liars-Lockhart/dp/0804168393"
+    }
   ]
 }

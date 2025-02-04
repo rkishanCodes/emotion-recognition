@@ -58,12 +58,14 @@ const BookRecommend = () => {
                 transition={{ duration: 0.2 }}
               >
                 <div className="card-content">
-                  <img
-                    src={link}
-                    alt={`Book ${index + 1}`}
-                    className="book-image"
-                    loading="lazy"
-                  />
+                  <a href={link.url} target="_blank" rel="noopener noreferrer">
+                    <img
+                      src={link.image}
+                      alt={`Book ${index + 1}`}
+                      className="book-image"
+                      loading="lazy"
+                    />
+                  </a>
                 </div>
               </motion.div>
             ))
